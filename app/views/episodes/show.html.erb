@@ -1,0 +1,9 @@
+<h1>Episode <%= @episode.number %></h1>
+
+<p>Show Date: <%= @episode.date %></p>
+
+<h3>Guests</h3>
+
+<% @episode.guests.each do |t| %>
+    <a href="<%= "/guests/#{t.id}" %>"><%= t.name %><br>
+<% end %>

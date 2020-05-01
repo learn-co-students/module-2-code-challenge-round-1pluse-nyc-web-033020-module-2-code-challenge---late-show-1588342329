@@ -1,0 +1,8 @@
+<h1><%= @guest.name %></h1>
+
+<h3>Episode Appearances</h3>
+
+<% @guest.episodes.each do |e| %>
+<a href="<%= "/episodes/#{e.number}" %>">
+<%= "Episode #{e.number}"%><br>
+<% end %>
